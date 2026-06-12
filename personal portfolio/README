@@ -1,0 +1,183 @@
+# Divya Laxmi Edamakanti — Portfolio Website
+
+A cinematic, fully responsive personal portfolio website built with pure HTML, CSS, and vanilla JavaScript. Features premium dark-mode aesthetics, smooth animations, and an interactive UI designed to showcase web development skills.
+
+---
+
+## ✨ Features
+
+- **Cinematic Hero Section** — Floating profile image with film-frame corners, scan-line effect, ambient glow orbs, and a live "Available" status badge
+- **Typing Effect** — Animated role titles cycling through Web Developer, Frontend Engineer, Python Developer, UI/UX Enthusiast
+- **Custom Cursor** — Dual-layer magnetic cursor with blend-mode effect (desktop only)
+- **Scroll Progress Bar** — Thin gradient bar at the top tracking scroll position
+- **Scroll Reveal Animations** — Elements fade up into view as the user scrolls
+- **Animated Skill Bars** — Progress bars that fill when scrolled into view
+- **Interactive Timeline** — Pulsing dot timeline for Education and Experience
+- **Project Cards** — Hover zoom on thumbnails, supports both image and video previews
+- **Self-Introduction Video** — Embedded video section with cinematic overlay
+- **Certifications Grid** — Decorative accent cards for internships and credentials
+- **Contact Form** — Client-side form with animated submit feedback
+- **Embedded Google Map** — Location pin for Ongole, Andhra Pradesh
+- **Sticky Navigation** — Active link highlighting based on scroll position, mobile hamburger menu
+- **Footer** — Social links with back-to-top button
+- **Noise Texture Overlay** — Subtle cinematic film grain on the background
+- **Fully Responsive** — Tested across desktop (1280px+), tablet (768px), and mobile (480px)
+- **Accessibility** — `prefers-reduced-motion` respected, ARIA labels on icon-only buttons
+
+---
+
+## 🗂️ File Structure
+
+```
+portfolio/
+├── index.html       ← Single-file portfolio (HTML + CSS + JS)
+└── README.md        ← This file
+```
+
+All styles and scripts are inlined in `index.html` — no build step or dependencies required beyond CDN fonts and Font Awesome icons.
+
+---
+
+## 🚀 Getting Started
+
+### Run Locally
+
+1. Download or clone the repository
+2. Open `index.html` in any modern browser
+
+```bash
+# No installation needed — just open the file
+open index.html
+```
+
+### Deploy to GitHub Pages
+
+1. Push the project to a GitHub repository
+2. Go to **Settings → Pages**
+3. Set source to the `main` branch, root folder
+4. Your portfolio will be live at `https://<username>.github.io/<repo-name>/`
+
+### Deploy to Netlify
+
+Drag and drop the project folder onto [netlify.com/drop](https://app.netlify.com/drop) — live in seconds.
+
+---
+
+## 🎨 Design System
+
+| Token | Value | Usage |
+|---|---|---|
+| `--ink` | `#0a0a0f` | Page background |
+| `--surface` | `#111118` | Secondary surfaces |
+| `--card` | `rgba(255,255,255,0.04)` | Glass card fill |
+| `--accent` | `#c084fc` | Lilac — primary accent |
+| `--accent2` | `#67e8f9` | Ice cyan — secondary accent |
+| `--grad` | `135deg, #c084fc → #67e8f9` | Gradient on headings, buttons, bars |
+| `--ff-d` | Syne | Display / headings |
+| `--ff-b` | Space Grotesk | Body text |
+| `--ff-m` | JetBrains Mono | Labels, tags, dates |
+
+---
+
+## 🔧 Customisation Guide
+
+### Update Personal Info
+
+Open `index.html` and search for the following placeholders:
+
+| Placeholder | Replace With |
+|---|---|
+| `your-email@example.com` | Your actual email address |
+| `Ongole, Andhra Pradesh, India` | Your current city/location |
+| Profile image URL (Cloudinary) | Your own hosted image URL |
+| Resume download URL (Cloudinary) | Your own hosted resume URL |
+
+### Add a New Project
+
+Copy one of the existing `.card.pcrd` blocks inside `#projects` and update:
+- `src` on the `<img>` or `<video>` tag
+- `h3` title and `p` description
+- `.tag` spans for tech stack
+- `href` on the button links
+
+### Change the Colour Accent
+
+In the `:root` block at the top of the `<style>` tag, update:
+
+```css
+--accent: #c084fc;   /* change to your preferred colour */
+--accent2: #67e8f9;  /* change secondary accent */
+```
+
+The gradient `--grad` will automatically update wherever it's used.
+
+### Add More Typing Roles
+
+Find the `roles` array in the `<script>` tag:
+
+```js
+const roles = ['Web Developer', 'Frontend Engineer', 'Python Developer', 'UI/UX Enthusiast'];
+```
+
+Add or remove strings as needed.
+
+---
+
+## 📦 External Dependencies (CDN only)
+
+| Resource | Purpose |
+|---|---|
+| [Google Fonts — Syne](https://fonts.google.com/specimen/Syne) | Display typeface |
+| [Google Fonts — Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) | Body typeface |
+| [Google Fonts — JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) | Monospace labels |
+| [Font Awesome 6.4](https://fontawesome.com) | Icons |
+| [Cloudinary](https://cloudinary.com) | Hosted images and videos |
+
+No npm, no bundler, no framework — everything runs in the browser as-is.
+
+---
+
+## 📱 Responsive Breakpoints
+
+| Breakpoint | Layout Changes |
+|---|---|
+| `≥ 1024px` | Two-column hero, about, resume, contact grids |
+| `< 1024px` | Single-column layout, avatar moves above text |
+| `< 768px` | Hamburger nav, sections reduce padding, cursor hidden |
+| `< 480px` | Hero buttons stack vertically, project grid single column |
+
+---
+
+## 🌐 Live Sections
+
+| Section ID | Content |
+|---|---|
+| `#hero` | Name, role, avatar, social links, stats |
+| `#about` | Bio, career objective, stat cards |
+| `#skills` | Animated progress bars: HTML, CSS, JS, Python, Git |
+| `#resume` | Preview image, education & experience timeline, download link |
+| `#projects` | Weather API Fetcher, College Portfolio, Land Price Prediction |
+| `#intro` | Self-introduction video |
+| `#certifications` | Python Full Stack, EduSkills, AICTE internship cards |
+| `#contact` | Contact form, info panel, embedded map |
+
+---
+
+## 👩‍💻 Author
+
+**Divya Laxmi Edamakanti**
+B.Tech Artifical intelligence and machine learning(2024–2028)
+Ongole, Andhra Pradesh, India
+
+- GitHub: [divyalaxmiedamakanti-cmyk](https://github.com/divyalaxmiedamakanti-cmyk)
+- LinkedIn: [divya-laxmi-edamakanti-70305b323](https://www.linkedin.com/in/divya-laxmi-edamakanti-70305b323/)
+
+---
+
+## 📄 License
+
+This portfolio is personal and not licensed for redistribution. Feel free to use it as inspiration for your own portfolio.
+
+---
+
+*Built with HTML5 · CSS3 · Vanilla JavaScript · No frameworks required*
